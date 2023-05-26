@@ -1,0 +1,21 @@
+1. issue while building the project, related to version, resolved after updating maven-compiler-source verion in pom
+2. issue while connecting to db: In mongo URI, database name is also needed after cluster
+3. Cluster not picking up from env file..for now hardcoded in application.prop
+4. Got access error (invalid auth cred) while connecting to database, removed env.variablesName from prop file, put directly varName
+Cluster problem also solved by this
+5. GetSingle movie api was not working, giving whitelabel error. replaced @RequestMapping annotation on class level
+
+
+***********************************************************************************************************************
+=> 2 Types of classes: Movies and Reviews
+    Movie class uses review class object for mapping
+
+=> for getter and setter annotations are used
+
+=> Reposiitory class extends MongoDBRepository, so no need to implement basic fn like findById, findAll etc functions.
+but need to implement user specific functions like findBySomethingElse etc
+We only need to define getMovieByColumnName, spring boot understand, no need to implement
+
+=>
+
+
